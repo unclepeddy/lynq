@@ -50,6 +50,14 @@ func resourceEvent() *schema.Resource {
 				Required: true,
 			},
 
+			"recurrence": &schema.Schema{
+				Type:     schema.TypeList,
+				Optional: true,
+				Elem: &schema.Schema{
+					Type: schema.TypeString,
+				},
+			},
+
 			"guests_can_invite_others": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -191,6 +199,7 @@ func resourceEventRead(d *schema.ResourceData, meta interface{}) error {
 	d.Set("description", event.Description)
 	d.Set("start", event.Start)
 	d.Set("end", event.End)
+	d.Set("recurrence", event.Recurrence)
 	if event.GuestsCanInviteOthers != nil {
 		d.Set("guests_can_invite_others", *event.GuestsCanInviteOthers)
 	}
@@ -276,6 +285,11 @@ func resourceEventBuild(d *schema.ResourceData, meta interface{}) (*calendar.Eve
 
 	start := d.Get("start").(string)
 	end := d.Get("end").(string)
+	recurrenceRaw := d.Get("recurrence").([]interface{})
+	recurrence := make([]string, len(recurrenceRaw))
+	for k, r := range recurrenceRaw {
+		recurrence[k] = r.(string)
+	}
 
 	guestsCanInviteOthers := d.Get("guests_can_invite_others").(bool)
 	guestsCanModify := d.Get("guests_can_modify").(bool)
@@ -296,12 +310,26 @@ func resourceEventBuild(d *schema.ResourceData, meta interface{}) (*calendar.Eve
 	}
 	event.Transparency = boolToTransparency(showAsAvailable)
 	event.Visibility = visibility
+
+	// var startTime, endTime time.Time
+	// var err error
+	// if startTime, err = time.Parse(time.RFC3339, start); err != nil {
+	// 	return nil, errors.Wrap(err, "failed to parse 'start'")
+	// }
 	event.Start = &calendar.EventDateTime{
 		DateTime: start,
+		// TimeZone: startZone,
+		TimeZone: "America/New_York",
 	}
+	// if endTime, err = time.Parse(time.RFC3339, end); err != nil {
+	// 	return nil, errors.Wrap(err, "failed to parse 'end'")
+	// }
 	event.End = &calendar.EventDateTime{
 		DateTime: end,
+		// TimeZone: endZone,
+		TimeZone: "America/New_York",
 	}
+	event.Recurrence = recurrence
 
 	// Parse reminders
 	remindersRaw := d.Get("reminder").(*schema.Set)

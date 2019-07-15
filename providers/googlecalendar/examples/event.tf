@@ -3,8 +3,12 @@ resource "googlecalendar_event" "peddy_kyle" {
   description = "See summary"
   location    = "Fort Asshole"
 
-  start = "2019-07-07T13:00:00-05:00"
-  end   = "2019-07-07T14:00:00-05:00"
+  start = "2019-07-18T13:00:00-05:00"
+  end   = "2019-07-18T14:00:00-05:00"
+
+  recurrence = [
+    "RRULE:FREQ=WEEKLY;BYDAY=TH",
+  ]
 
   attendee {
     email = "pedrampejman2010@gmail.com"
@@ -12,4 +16,6 @@ resource "googlecalendar_event" "peddy_kyle" {
   attendee {
     email = "kylevonbredow@gmail.com"
   }
+
+  guests_can_modify = true
 }
