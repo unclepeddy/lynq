@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/hashicorp/terraform/plugin"
 	"github.com/hashicorp/terraform/terraform"
-	"github.com/unclepeddy/lynq/providers/googlecalendar"
+	"github.com/unclepeddy/lynq/providers/calendar"
 )
 
 func main() {

@@ -547,6 +547,14 @@
   version = "v0.1.0"
 
 [[projects]]
+  branch = "master"
+  digest = "1:2d58bc53f8775a04845c8e7e7264386fa6fe6dd6302777de31896aafaeda4868"
+  name = "github.com/zmb3/spotify"
+  packages = ["."]
+  pruneopts = ""
+  revision = "0ba4a64949368473e066829de4ff80a09f0e15b5"
+
+[[projects]]
   digest = "1:15322677d41c39ba767c0bcfe258fe2ffeeb1c355069674788418bf9c507e811"
   name = "go.opencensus.io"
   packages = [
@@ -763,6 +771,8 @@
     "github.com/hashicorp/terraform/plugin",
     "github.com/hashicorp/terraform/terraform",
     "github.com/pkg/errors",
+    "github.com/zmb3/spotify",
+    "golang.org/x/oauth2",
     "golang.org/x/oauth2/google",
     "google.golang.org/api/calendar/v3",
   ]

@@ -14,3 +14,7 @@
 [[constraint]]
   branch = "master"
   name = "google.golang.org/api"
+
+[[constraint]]
+  branch = "master"  
+  name = "github.com/zmb3/spotify"
