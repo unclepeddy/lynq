@@ -1,0 +1,39 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: terrasync
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: terrasync
+  template:
+    metadata:
+      labels:
+        name: terrasync
+    spec:
+      containers:
+      - name: git-sync
+        image: k8s.gcr.io/git-sync:v3.0.1
+        volumeMounts:
+        - name: terraform-config
+          mountPath: /tmp/git
+        env:
+        - name: GIT_SYNC_DEST
+          value: lynq
+        - name: GIT_SYNC_REPO
+          value: https://github.com/unclepeddy/lynq.git
+        - name: GIT_SYNC_BRANCH
+          value: terrasync-test
+      - name: terrasync
+        image: terrasync:v0.1.0  # Replace with local copy
+        args:
+        - -dir=/src/lynq/terraform
+        - -t=45
+        volumeMounts:
+        - name: terraform-config
+          mountPath: /src
+      volumes:
+      - name: terraform-config
+        emptyDir: {}
