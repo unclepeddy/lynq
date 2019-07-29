@@ -17,6 +17,7 @@ func apply(t *Terraform) {
 	}
 	if err := t.Exec(initArgs); err != nil {
 		log.Printf("failed to run init: %v", err)
+		return
 	}
 
 	log.Print("running terraform apply:")
@@ -27,6 +28,7 @@ func apply(t *Terraform) {
 	}
 	if err := t.Exec(applyArgs); err != nil {
 		log.Printf("failed to run apply: %v", err)
+		return
 	}
 
 	log.Print("successfully applied configuration")
