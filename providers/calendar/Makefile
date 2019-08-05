@@ -20,10 +20,12 @@ deps:
 	@dep ensure -update
 	@dep prune
 
-# dev builds and installs the plugin into ~/.terraform.d
-dev:
+# builds and installs the plugin into ~/.terraform.d
+calendar: .FORCE
 	@mkdir -p "${PLUGIN_PATH}"
 	@go build \
 		-ldflags "${LD_FLAGS}" \
 		-tags "${GOTAGS}" \
-		-o "${PLUGIN_PATH}/terraform-provider-googlecalendar"
+		-o "${PLUGIN_PATH}/terraform-provider-calendar"
+
+.FORCE:

@@ -1,4 +1,4 @@
-package main
+package spotify
 
 import (
 	"encoding/json"
@@ -19,15 +19,18 @@ const (
 	state           = "lynq"
 	baseAddr        = "http://localhost"
 	netAddr         = ":8080"
-	redirEndpoint   = "/lynq_callback"
+	spotifyRedirEndpoint = "/spotify_callback"
 )
 
-func main() {
-	ch := make(chan *spotify.Client)
-	auth := spotify.NewAuthenticator(baseAddr+netAddr+redirEndpoint,
+func exampleAuth() {
+	auth := spotify.NewAuthenticator(baseAddr+netAddr+spotifyRedirEndpoint,
 		spotify.ScopeUserReadPrivate, spotify.ScopeUserReadRecentlyPlayed)
-	startAuthWebhook(ch, auth)
-	<-ch
+	client := authWebhook(auth)
+	user, err := client.CurrentUser()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("Obtained credentials for user `%s`\n", user.ID)
 }
 
 // saveToken saves given token as a json object in a file named the given id
@@ -45,27 +48,34 @@ func saveToken(id string, token *oauth2.Token) {
 
 	fmt.Printf("Saving credential file to: %s\n", file)
 	f, err := os.Create(file)
+	defer f.Close()
 	if err != nil {
 		log.Fatalf("Unable to save oauth token: %v", err)
 	}
-	defer f.Close()
-	json.NewEncoder(f).Encode(token)
+	err = json.NewEncoder(f).Encode(token)
+	if err != nil {
+		log.Fatalf("Unable to save oauth token: %v", err)
+	}
 }
 
-// startAuthWebhook sets up auth webhook and prints OAuth service endpoint url
+// authWebhook sets up auth webhook, prints OAuth service endpoint url and blocks
+// until user has authenticated with Spotify, at which point returns spotify client.
 // Note: if this is ever called in a long-running process, we should explicitly do shutdown
-func startAuthWebhook(ch chan *spotify.Client, auth spotify.Authenticator) {
+func authWebhook(auth spotify.Authenticator) *spotify.Client {
+	ch := make(chan *spotify.Client)
 	log.Print("Starting webserver at address ", netAddr)
 
-	http.HandleFunc(redirEndpoint, completeAuth(ch, auth))
+	http.HandleFunc(spotifyRedirEndpoint, completeAuth(ch, auth))
 	go http.ListenAndServe(netAddr, nil)
 
 	url := auth.AuthURL(state)
 	fmt.Println("Please log in to Spotify by visiting the following page in your browser:", url)
+
+	return <-ch
 }
 
 // completeAuth uses response from Spotify's auth service to create client and caches the token
-func completeAuth(ch chan *spotify.Client, auth spotify.Authenticator) func(http.ResponseWriter, *http.Request) {
+func completeAuth(ch chan *spotify.Client, auth spotify.Authenticator) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		tok, err := auth.Token(state, r)
 		if err != nil {

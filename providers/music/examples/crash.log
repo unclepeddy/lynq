@@ -1,0 +1,740 @@
+2019/08/04 16:40:30 [INFO] Terraform version: 0.12.3  
+2019/08/04 16:40:30 [INFO] Go runtime version: go1.12.4
+2019/08/04 16:40:30 [INFO] CLI args: []string{"/home/peddy/bin/terraform", "plan"}
+2019/08/04 16:40:30 [DEBUG] Attempting to open CLI config file: /home/peddy/.terraformrc
+2019/08/04 16:40:30 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2019/08/04 16:40:30 [INFO] CLI command args: []string{"plan"}
+2019/08/04 16:40:30 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2019/08/04 16:40:30 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2019/08/04 16:40:30 [DEBUG] New state was assigned lineage "500a9f0d-99ea-1b27-b73d-6d1316b41dc4"
+2019/08/04 16:40:30 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2019/08/04 16:40:30 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2019/08/04 16:40:30 [DEBUG] checking for provider in "."
+2019/08/04 16:40:30 [DEBUG] checking for provider in "/home/peddy/bin"
+2019/08/04 16:40:30 [DEBUG] checking for provider in ".terraform/plugins/linux_amd64"
+2019/08/04 16:40:30 [DEBUG] checking for provider in "/home/peddy/.terraform.d/plugins"
+2019/08/04 16:40:30 [WARN] found legacy provider "terraform-provider-calendar"
+2019/08/04 16:40:30 [WARN] found legacy provider "terraform-provider-music"
+2019/08/04 16:40:30 [DEBUG] found valid plugin: "calendar", "0.0.0", "/home/peddy/.terraform.d/plugins/terraform-provider-calendar"
+2019/08/04 16:40:30 [DEBUG] found valid plugin: "music", "0.0.0", "/home/peddy/.terraform.d/plugins/terraform-provider-music"
+2019/08/04 16:40:30 [DEBUG] checking for provisioner in "."
+2019/08/04 16:40:30 [DEBUG] checking for provisioner in "/home/peddy/bin"
+2019/08/04 16:40:30 [DEBUG] checking for provisioner in ".terraform/plugins/linux_amd64"
+2019/08/04 16:40:30 [DEBUG] checking for provisioner in "/home/peddy/.terraform.d/plugins"
+2019/08/04 16:40:30 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2019/08/04 16:40:30 [INFO] backend/local: starting Plan operation
+2019/08/04 16:40:30 [TRACE] backend/local: requesting state manager for workspace "default"
+2019/08/04 16:40:30 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2019/08/04 16:40:30 [TRACE] backend/local: requesting state lock for workspace "default"
+2019/08/04 16:40:30 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2019/08/04 16:40:30 [TRACE] statemgr.Filesystem: existing snapshot has lineage "7bef7567-9a76-d5da-e873-324fd9b680fc" serial 3
+2019/08/04 16:40:30 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2019/08/04 16:40:30 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2019/08/04 16:40:30 [TRACE] backend/local: reading remote state for workspace "default"
+2019/08/04 16:40:30 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2019/08/04 16:40:30 [TRACE] statemgr.Filesystem: read snapshot with lineage "7bef7567-9a76-d5da-e873-324fd9b680fc" serial 3
+2019/08/04 16:40:30 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2019/08/04 16:40:30 [TRACE] backend/local: building context for current working directory
+2019/08/04 16:40:30 [TRACE] terraform.NewContext: starting
+2019/08/04 16:40:30 [TRACE] terraform.NewContext: resolving provider version selections
+2019/08/04 16:40:31 [TRACE] terraform.NewContext: loading provider schemas
+2019/08/04 16:40:31 [TRACE] LoadSchemas: retrieving schema for provider type "calendar"
+2019-08-04T16:40:31.095-0700 [INFO]  plugin: configuring client automatic mTLS
+2019-08-04T16:40:31.121-0700 [DEBUG] plugin: starting plugin: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar args=[/home/peddy/.terraform.d/plugins/terraform-provider-calendar]
+2019-08-04T16:40:31.121-0700 [DEBUG] plugin: plugin started: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar pid=158073
+2019-08-04T16:40:31.121-0700 [DEBUG] plugin: waiting for RPC address: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar
+2019-08-04T16:40:31.129-0700 [INFO]  plugin.terraform-provider-calendar: configuring server automatic mTLS: timestamp=2019-08-04T16:40:31.129-0700
+2019-08-04T16:40:31.160-0700 [DEBUG] plugin: using plugin: version=5
+2019-08-04T16:40:31.160-0700 [DEBUG] plugin.terraform-provider-calendar: plugin address: address=/tmp/plugin999466644 network=unix timestamp=2019-08-04T16:40:31.160-0700
+2019/08/04 16:40:31 [TRACE] GRPCProvider: GetSchema
+2019/08/04 16:40:31 [TRACE] GRPCProvider: Close
+2019-08-04T16:40:31.222-0700 [DEBUG] plugin: plugin process exited: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar pid=158073
+2019-08-04T16:40:31.222-0700 [DEBUG] plugin: plugin exited
+2019/08/04 16:40:31 [TRACE] LoadSchemas: retrieving schema for provider type "music"
+2019-08-04T16:40:31.222-0700 [INFO]  plugin: configuring client automatic mTLS
+2019-08-04T16:40:31.253-0700 [DEBUG] plugin: starting plugin: path=/home/peddy/.terraform.d/plugins/terraform-provider-music args=[/home/peddy/.terraform.d/plugins/terraform-provider-music]
+2019-08-04T16:40:31.253-0700 [DEBUG] plugin: plugin started: path=/home/peddy/.terraform.d/plugins/terraform-provider-music pid=158089
+2019-08-04T16:40:31.253-0700 [DEBUG] plugin: waiting for RPC address: path=/home/peddy/.terraform.d/plugins/terraform-provider-music
+2019-08-04T16:40:31.261-0700 [INFO]  plugin.terraform-provider-music: configuring server automatic mTLS: timestamp=2019-08-04T16:40:31.260-0700
+2019-08-04T16:40:31.291-0700 [DEBUG] plugin.terraform-provider-music: plugin address: address=/tmp/plugin763719109 network=unix timestamp=2019-08-04T16:40:31.290-0700
+2019-08-04T16:40:31.291-0700 [DEBUG] plugin: using plugin: version=5
+2019/08/04 16:40:31 [TRACE] GRPCProvider: GetSchema
+2019/08/04 16:40:31 [TRACE] GRPCProvider: Close
+2019-08-04T16:40:31.352-0700 [DEBUG] plugin: plugin process exited: path=/home/peddy/.terraform.d/plugins/terraform-provider-music pid=158089
+2019-08-04T16:40:31.352-0700 [DEBUG] plugin: plugin exited
+2019/08/04 16:40:31 [TRACE] terraform.NewContext: complete
+2019/08/04 16:40:31 [TRACE] backend/local: finished building terraform.Context
+2019/08/04 16:40:31 [TRACE] backend/local: requesting interactive input, if necessary
+2019/08/04 16:40:31 [TRACE] Context.Input: Prompting for variables
+2019/08/04 16:40:31 [TRACE] Context.Input: Prompting for provider arguments
+2019/08/04 16:40:31 [TRACE] Context.Input: Provider provider.music declared at concert.tf:1,1-17
+2019/08/04 16:40:31 [TRACE] Context.Input: Provider provider.calendar implied by resource block at concert.tf:14,1-36
+2019/08/04 16:40:31 [TRACE] Context.Input: Input for provider.music: map[string]cty.Value{}
+2019/08/04 16:40:31 [TRACE] Context.Input: Input for provider.calendar: map[string]cty.Value{}
+2019/08/04 16:40:31 [TRACE] backend/local: running validation operation
+2019/08/04 16:40:31 [INFO] terraform: building graph: GraphTypeValidate
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2019/08/04 16:40:31 [TRACE] ConfigTransformer: Starting for path: 
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+calendar_event.concert - *terraform.NodeValidatableResource
+data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.LocalTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.OutputTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.StateTransformer
+2019/08/04 16:40:31 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2019/08/04 16:40:31 [TRACE] AttachResourceConfigTransformer: attaching to "calendar_event.concert" (*terraform.NodeValidatableResource) config from concert.tf:14,1-36
+2019/08/04 16:40:31 [TRACE] AttachResourceConfigTransformer: attaching to "data.music_concert.recently_played_artists" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"concert.tf", Start:hcl.Pos{Line:5, Column:1, Byte:51}, End:hcl.Pos{Line:5, Column:47, Byte:97}}
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+calendar_event.concert - *terraform.NodeValidatableResource
+data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2019/08/04 16:40:31 [TRACE] ProviderConfigTransformer: attaching to "provider.music" provider configuration from concert.tf:1,1-17
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+calendar_event.concert - *terraform.NodeValidatableResource
+data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2019/08/04 16:40:31 [DEBUG] adding implicit provider configuration provider.calendar, implied first by calendar_event.concert
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+calendar_event.concert - *terraform.NodeValidatableResource
+data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2019/08/04 16:40:31 [TRACE] ProviderTransformer: calendar_event.concert is provided by provider.calendar or inherited equivalent
+2019/08/04 16:40:31 [TRACE] ProviderTransformer: data.music_concert.recently_played_artists is provided by provider.music or inherited equivalent
+2019/08/04 16:40:31 [TRACE] ProviderTransformer: exact match for provider.calendar serving calendar_event.concert
+2019/08/04 16:40:31 [DEBUG] ProviderTransformer: "calendar_event.concert" (*terraform.NodeValidatableResource) needs provider.calendar
+2019/08/04 16:40:31 [TRACE] ProviderTransformer: exact match for provider.music serving data.music_concert.recently_played_artists
+2019/08/04 16:40:31 [DEBUG] ProviderTransformer: "data.music_concert.recently_played_artists" (*terraform.NodeValidatableResource) needs provider.music
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+calendar_event.concert - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.music - *terraform.NodeApplyableProvider
+provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+calendar_event.concert - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.music - *terraform.NodeApplyableProvider
+provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2019/08/04 16:40:31 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.calendar
+2019/08/04 16:40:31 [TRACE] AttachSchemaTransformer: attaching resource schema to calendar_event.concert
+2019/08/04 16:40:31 [TRACE] AttachSchemaTransformer: attaching resource schema to data.music_concert.recently_played_artists
+2019/08/04 16:40:31 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.music
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2019/08/04 16:40:31 [DEBUG] ReferenceTransformer: "data.music_concert.recently_played_artists" references: []
+2019/08/04 16:40:31 [DEBUG] ReferenceTransformer: "var.email" references: []
+2019/08/04 16:40:31 [DEBUG] ReferenceTransformer: "provider.music" references: []
+2019/08/04 16:40:31 [DEBUG] ReferenceTransformer: "provider.calendar" references: []
+2019/08/04 16:40:31 [DEBUG] ReferenceTransformer: "calendar_event.concert" references: [data.music_concert.recently_played_artists data.music_concert.recently_played_artists data.music_concert.recently_played_artists data.music_concert.recently_played_artists data.music_concert.recently_played_artists data.music_concert.recently_played_artists var.email]
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+calendar_event.concert - *terraform.NodeValidatableResource
+  data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.music - *terraform.NodeApplyableProvider
+provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+calendar_event.concert - *terraform.NodeValidatableResource
+  data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.music - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  calendar_event.concert - *terraform.NodeValidatableResource
+  data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  provider.music - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+calendar_event.concert - *terraform.NodeValidatableResource
+  data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.music - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  calendar_event.concert - *terraform.NodeValidatableResource
+  data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  provider.music - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+provider.calendar - *terraform.NodeApplyableProvider
+provider.calendar (close) - *terraform.graphNodeCloseProvider
+  calendar_event.concert - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+provider.music (close) - *terraform.graphNodeCloseProvider
+  data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.RootTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+calendar_event.concert - *terraform.NodeValidatableResource
+  data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.music - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  calendar_event.concert - *terraform.NodeValidatableResource
+  data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  provider.music - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+provider.calendar - *terraform.NodeApplyableProvider
+provider.calendar (close) - *terraform.graphNodeCloseProvider
+  calendar_event.concert - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+provider.music (close) - *terraform.graphNodeCloseProvider
+  data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.music - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.calendar (close) - *terraform.graphNodeCloseProvider
+  provider.music (close) - *terraform.graphNodeCloseProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+calendar_event.concert - *terraform.NodeValidatableResource
+  data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+  provider.music - *terraform.NodeApplyableProvider
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  calendar_event.concert - *terraform.NodeValidatableResource
+provider.calendar - *terraform.NodeApplyableProvider
+provider.calendar (close) - *terraform.graphNodeCloseProvider
+  calendar_event.concert - *terraform.NodeValidatableResource
+provider.music - *terraform.NodeApplyableProvider
+provider.music (close) - *terraform.graphNodeCloseProvider
+  data.music_concert.recently_played_artists - *terraform.NodeValidatableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.calendar (close) - *terraform.graphNodeCloseProvider
+  provider.music (close) - *terraform.graphNodeCloseProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [DEBUG] Starting graph walk: walkValidate
+2019/08/04 16:40:31 [TRACE] dag/walk: updating graph
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "var.email"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "provider.calendar"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "provider.music (close)"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "data.music_concert.recently_played_artists"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "root"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "provider.music"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "provider.calendar (close)"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "calendar_event.concert"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "provider.calendar (close)" waiting on "calendar_event.concert"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "calendar_event.concert" waiting on "provider.calendar"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "data.music_concert.recently_played_artists" waiting on "provider.music"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "calendar_event.concert" waiting on "var.email"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "root" waiting on "provider.music (close)"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "provider.music (close)" waiting on "data.music_concert.recently_played_artists"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "root" waiting on "provider.calendar (close)"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "calendar_event.concert" waiting on "data.music_concert.recently_played_artists"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "calendar_event.concert"
+2019/08/04 16:40:31 [TRACE] dag/walk: dependencies changed for "provider.calendar (close)", sending new deps
+2019/08/04 16:40:31 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/08/04 16:40:31 [TRACE] dag/walk: dependencies changed for "calendar_event.concert", sending new deps
+2019/08/04 16:40:31 [TRACE] dag/walk: dependencies changed for "data.music_concert.recently_played_artists", sending new deps
+2019/08/04 16:40:31 [TRACE] dag/walk: dependencies changed for "provider.music (close)", sending new deps
+2019/08/04 16:40:31 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "provider.calendar"
+2019/08/04 16:40:31 [TRACE] vertex "provider.calendar": starting visit (*terraform.NodeApplyableProvider)
+2019/08/04 16:40:31 [TRACE] vertex "provider.calendar": evaluating
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "provider.music"
+2019/08/04 16:40:31 [TRACE] [walkValidate] Entering eval tree: provider.calendar
+2019/08/04 16:40:31 [TRACE] vertex "provider.music": starting visit (*terraform.NodeApplyableProvider)
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] vertex "provider.music": evaluating
+2019/08/04 16:40:31 [TRACE] [walkValidate] Entering eval tree: provider.music
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "var.email"
+2019/08/04 16:40:31 [TRACE] vertex "var.email": starting visit (*terraform.NodeRootVariable)
+2019/08/04 16:40:31 [TRACE] vertex "var.email": visit complete
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2019-08-04T16:40:31.354-0700 [INFO]  plugin: configuring client automatic mTLS
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2019-08-04T16:40:31.384-0700 [DEBUG] plugin: starting plugin: path=/home/peddy/.terraform.d/plugins/terraform-provider-music args=[/home/peddy/.terraform.d/plugins/terraform-provider-music]
+2019-08-04T16:40:31.384-0700 [DEBUG] plugin: plugin started: path=/home/peddy/.terraform.d/plugins/terraform-provider-music pid=158105
+2019-08-04T16:40:31.385-0700 [DEBUG] plugin: waiting for RPC address: path=/home/peddy/.terraform.d/plugins/terraform-provider-music
+2019-08-04T16:40:31.392-0700 [INFO]  plugin.terraform-provider-music: configuring server automatic mTLS: timestamp=2019-08-04T16:40:31.391-0700
+2019-08-04T16:40:31.422-0700 [DEBUG] plugin.terraform-provider-music: plugin address: network=unix address=/tmp/plugin260699960 timestamp=2019-08-04T16:40:31.422-0700
+2019-08-04T16:40:31.423-0700 [DEBUG] plugin: using plugin: version=5
+2019/08/04 16:40:31 [TRACE] BuiltinEvalContext: Initialized "music" provider for provider.music
+2019/08/04 16:40:31 [TRACE] <root>: eval: terraform.EvalNoop
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019-08-04T16:40:31.423-0700 [INFO]  plugin: configuring client automatic mTLS
+2019-08-04T16:40:31.460-0700 [DEBUG] plugin: starting plugin: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar args=[/home/peddy/.terraform.d/plugins/terraform-provider-calendar]
+2019-08-04T16:40:31.460-0700 [DEBUG] plugin: plugin started: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar pid=158118
+2019-08-04T16:40:31.460-0700 [DEBUG] plugin: waiting for RPC address: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar
+2019-08-04T16:40:31.468-0700 [INFO]  plugin.terraform-provider-calendar: configuring server automatic mTLS: timestamp=2019-08-04T16:40:31.468-0700
+2019-08-04T16:40:31.502-0700 [DEBUG] plugin.terraform-provider-calendar: plugin address: network=unix address=/tmp/plugin846599314 timestamp=2019-08-04T16:40:31.502-0700
+2019-08-04T16:40:31.502-0700 [DEBUG] plugin: using plugin: version=5
+2019/08/04 16:40:31 [TRACE] BuiltinEvalContext: Initialized "calendar" provider for provider.calendar
+2019/08/04 16:40:31 [TRACE] <root>: eval: terraform.EvalNoop
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2019/08/04 16:40:31 [TRACE] buildProviderConfig for provider.calendar: no configuration at all
+2019/08/04 16:40:31 [TRACE] GRPCProvider: GetSchema
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2019/08/04 16:40:31 [TRACE] buildProviderConfig for provider.music: using explicit config only
+2019/08/04 16:40:31 [TRACE] GRPCProvider: GetSchema
+2019/08/04 16:40:31 [TRACE] GRPCProvider: PrepareProviderConfig
+2019/08/04 16:40:31 [TRACE] <root>: eval: terraform.EvalNoop
+2019/08/04 16:40:31 [TRACE] <root>: eval: terraform.EvalNoop
+2019/08/04 16:40:31 [TRACE] [walkValidate] Exiting eval tree: provider.music
+2019/08/04 16:40:31 [TRACE] vertex "provider.music": visit complete
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "data.music_concert.recently_played_artists"
+2019/08/04 16:40:31 [TRACE] vertex "data.music_concert.recently_played_artists": starting visit (*terraform.NodeValidatableResource)
+2019/08/04 16:40:31 [TRACE] vertex "data.music_concert.recently_played_artists": evaluating
+2019/08/04 16:40:31 [TRACE] [walkValidate] Entering eval tree: data.music_concert.recently_played_artists
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2019/08/04 16:40:31 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2019/08/04 16:40:31 [TRACE] [walkValidate] Exiting eval tree: data.music_concert.recently_played_artists
+2019/08/04 16:40:31 [TRACE] vertex "data.music_concert.recently_played_artists": visit complete
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "provider.music (close)"
+2019/08/04 16:40:31 [TRACE] vertex "provider.music (close)": starting visit (*terraform.graphNodeCloseProvider)
+2019/08/04 16:40:31 [TRACE] vertex "provider.music (close)": evaluating
+2019/08/04 16:40:31 [TRACE] [walkValidate] Entering eval tree: provider.music (close)
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2019/08/04 16:40:31 [TRACE] GRPCProvider: Close
+2019-08-04T16:40:31.506-0700 [DEBUG] plugin: plugin process exited: path=/home/peddy/.terraform.d/plugins/terraform-provider-music pid=158105
+2019-08-04T16:40:31.506-0700 [DEBUG] plugin: plugin exited
+2019/08/04 16:40:31 [TRACE] [walkValidate] Exiting eval tree: provider.music (close)
+2019/08/04 16:40:31 [TRACE] vertex "provider.music (close)": visit complete
+2019/08/04 16:40:31 [TRACE] GRPCProvider: PrepareProviderConfig
+2019/08/04 16:40:31 [TRACE] <root>: eval: terraform.EvalNoop
+2019/08/04 16:40:31 [TRACE] <root>: eval: terraform.EvalNoop
+2019/08/04 16:40:31 [TRACE] [walkValidate] Exiting eval tree: provider.calendar
+2019/08/04 16:40:31 [TRACE] vertex "provider.calendar": visit complete
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "calendar_event.concert"
+2019/08/04 16:40:31 [TRACE] vertex "calendar_event.concert": starting visit (*terraform.NodeValidatableResource)
+2019/08/04 16:40:31 [TRACE] vertex "calendar_event.concert": evaluating
+2019/08/04 16:40:31 [TRACE] [walkValidate] Entering eval tree: calendar_event.concert
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2019/08/04 16:40:31 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2019/08/04 16:40:31 [TRACE] [walkValidate] Exiting eval tree: calendar_event.concert
+2019/08/04 16:40:31 [TRACE] vertex "calendar_event.concert": visit complete
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "provider.calendar (close)"
+2019/08/04 16:40:31 [TRACE] vertex "provider.calendar (close)": starting visit (*terraform.graphNodeCloseProvider)
+2019/08/04 16:40:31 [TRACE] vertex "provider.calendar (close)": evaluating
+2019/08/04 16:40:31 [TRACE] [walkValidate] Entering eval tree: provider.calendar (close)
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2019/08/04 16:40:31 [TRACE] GRPCProvider: Close
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2019/08/04 16:40:31 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2019/08/04 16:40:31 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2019/08/04 16:40:31 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2019/08/04 16:40:31 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2019/08/04 16:40:31 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2019-08-04T16:40:31.571-0700 [DEBUG] plugin: plugin process exited: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar pid=158118
+2019-08-04T16:40:31.571-0700 [DEBUG] plugin: plugin exited
+2019/08/04 16:40:31 [TRACE] [walkValidate] Exiting eval tree: provider.calendar (close)
+2019/08/04 16:40:31 [TRACE] vertex "provider.calendar (close)": visit complete
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "root"
+2019/08/04 16:40:31 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2019/08/04 16:40:31 [TRACE] vertex "root": visit complete
+2019/08/04 16:40:31 [INFO] backend/local: plan calling Refresh
+2019/08/04 16:40:31 [INFO] terraform: building graph: GraphTypeRefresh
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2019/08/04 16:40:31 [TRACE] ConfigTransformer: Starting for path: 
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+calendar_event.concert - *terraform.NodeRefreshableManagedResource
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2019/08/04 16:40:31 [TRACE] ConfigTransformer: Starting for path: 
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+calendar_event.concert - *terraform.NodeRefreshableManagedResource
+data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.StateTransformer
+2019/08/04 16:40:31 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2019/08/04 16:40:31 [TRACE] AttachResourceConfigTransformer: attaching to "calendar_event.concert" (*terraform.NodeRefreshableManagedResource) config from concert.tf:14,1-36
+2019/08/04 16:40:31 [TRACE] AttachResourceConfigTransformer: attaching to "data.music_concert.recently_played_artists" (*terraform.NodeRefreshableDataResource) config from hcl.Range{Filename:"concert.tf", Start:hcl.Pos{Line:5, Column:1, Byte:51}, End:hcl.Pos{Line:5, Column:47, Byte:97}}
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+calendar_event.concert - *terraform.NodeRefreshableManagedResource
+data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.LocalTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.OutputTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2019/08/04 16:40:31 [TRACE] ProviderConfigTransformer: attaching to "provider.music" provider configuration from concert.tf:1,1-17
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+calendar_event.concert - *terraform.NodeRefreshableManagedResource
+data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2019/08/04 16:40:31 [DEBUG] adding implicit provider configuration provider.calendar, implied first by calendar_event.concert
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+calendar_event.concert - *terraform.NodeRefreshableManagedResource
+data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2019/08/04 16:40:31 [TRACE] ProviderTransformer: data.music_concert.recently_played_artists is provided by provider.music or inherited equivalent
+2019/08/04 16:40:31 [TRACE] ProviderTransformer: calendar_event.concert is provided by provider.calendar or inherited equivalent
+2019/08/04 16:40:31 [TRACE] ProviderTransformer: exact match for provider.music serving data.music_concert.recently_played_artists
+2019/08/04 16:40:31 [DEBUG] ProviderTransformer: "data.music_concert.recently_played_artists" (*terraform.NodeRefreshableDataResource) needs provider.music
+2019/08/04 16:40:31 [TRACE] ProviderTransformer: exact match for provider.calendar serving calendar_event.concert
+2019/08/04 16:40:31 [DEBUG] ProviderTransformer: "calendar_event.concert" (*terraform.NodeRefreshableManagedResource) needs provider.calendar
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+calendar_event.concert - *terraform.NodeRefreshableManagedResource
+  provider.calendar - *terraform.NodeApplyableProvider
+data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.music - *terraform.NodeApplyableProvider
+provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2019/08/04 16:40:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+calendar_event.concert - *terraform.NodeRefreshableManagedResource
+  provider.calendar - *terraform.NodeApplyableProvider
+data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.music - *terraform.NodeApplyableProvider
+provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2019/08/04 16:40:31 [TRACE] AttachSchemaTransformer: attaching resource schema to calendar_event.concert
+2019/08/04 16:40:31 [TRACE] AttachSchemaTransformer: attaching resource schema to data.music_concert.recently_played_artists
+2019/08/04 16:40:31 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.music
+2019/08/04 16:40:31 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.calendar
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2019/08/04 16:40:31 [DEBUG] ReferenceTransformer: "calendar_event.concert" references: [data.music_concert.recently_played_artists data.music_concert.recently_played_artists data.music_concert.recently_played_artists data.music_concert.recently_played_artists data.music_concert.recently_played_artists data.music_concert.recently_played_artists var.email]
+2019/08/04 16:40:31 [DEBUG] ReferenceTransformer: "data.music_concert.recently_played_artists" references: []
+2019/08/04 16:40:31 [DEBUG] ReferenceTransformer: "var.email" references: []
+2019/08/04 16:40:31 [DEBUG] ReferenceTransformer: "provider.music" references: []
+2019/08/04 16:40:31 [DEBUG] ReferenceTransformer: "provider.calendar" references: []
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+calendar_event.concert - *terraform.NodeRefreshableManagedResource
+  data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.music - *terraform.NodeApplyableProvider
+provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+calendar_event.concert - *terraform.NodeRefreshableManagedResource
+  data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.music - *terraform.NodeApplyableProvider
+provider.calendar - *terraform.NodeApplyableProvider
+provider.calendar (close) - *terraform.graphNodeCloseProvider
+  calendar_event.concert - *terraform.NodeRefreshableManagedResource
+  provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+provider.music (close) - *terraform.graphNodeCloseProvider
+  data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.music - *terraform.NodeApplyableProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.RootTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+calendar_event.concert - *terraform.NodeRefreshableManagedResource
+  data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.music - *terraform.NodeApplyableProvider
+provider.calendar - *terraform.NodeApplyableProvider
+provider.calendar (close) - *terraform.graphNodeCloseProvider
+  calendar_event.concert - *terraform.NodeRefreshableManagedResource
+  provider.calendar - *terraform.NodeApplyableProvider
+provider.music - *terraform.NodeApplyableProvider
+provider.music (close) - *terraform.graphNodeCloseProvider
+  data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.music - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  provider.calendar (close) - *terraform.graphNodeCloseProvider
+  provider.music (close) - *terraform.graphNodeCloseProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+calendar_event.concert - *terraform.NodeRefreshableManagedResource
+  data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.calendar - *terraform.NodeApplyableProvider
+  var.email - *terraform.NodeRootVariable
+data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+  provider.music - *terraform.NodeApplyableProvider
+provider.calendar - *terraform.NodeApplyableProvider
+provider.calendar (close) - *terraform.graphNodeCloseProvider
+  calendar_event.concert - *terraform.NodeRefreshableManagedResource
+provider.music - *terraform.NodeApplyableProvider
+provider.music (close) - *terraform.graphNodeCloseProvider
+  data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResource
+root - terraform.graphNodeRoot
+  provider.calendar (close) - *terraform.graphNodeCloseProvider
+  provider.music (close) - *terraform.graphNodeCloseProvider
+var.email - *terraform.NodeRootVariable
+------
+2019/08/04 16:40:31 [DEBUG] Starting graph walk: walkRefresh
+2019/08/04 16:40:31 [TRACE] dag/walk: updating graph
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "provider.music (close)"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "root"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "calendar_event.concert"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "data.music_concert.recently_played_artists"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "var.email"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "provider.music"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "provider.calendar"
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "provider.calendar (close)"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "data.music_concert.recently_played_artists" waiting on "provider.music"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "calendar_event.concert" waiting on "data.music_concert.recently_played_artists"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "provider.calendar (close)" waiting on "calendar_event.concert"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "calendar_event.concert" waiting on "provider.calendar"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "calendar_event.concert" waiting on "var.email"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "root" waiting on "provider.calendar (close)"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "provider.music (close)" waiting on "data.music_concert.recently_played_artists"
+2019/08/04 16:40:31 [TRACE] dag/walk: added edge: "root" waiting on "provider.music (close)"
+2019/08/04 16:40:31 [TRACE] dag/walk: dependencies changed for "data.music_concert.recently_played_artists", sending new deps
+2019/08/04 16:40:31 [TRACE] dag/walk: dependencies changed for "calendar_event.concert", sending new deps
+2019/08/04 16:40:31 [TRACE] dag/walk: dependencies changed for "provider.calendar (close)", sending new deps
+2019/08/04 16:40:31 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/08/04 16:40:31 [TRACE] dag/walk: dependencies changed for "provider.music (close)", sending new deps
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "var.email"
+2019/08/04 16:40:31 [TRACE] vertex "var.email": starting visit (*terraform.NodeRootVariable)
+2019/08/04 16:40:31 [TRACE] vertex "var.email": visit complete
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "provider.music"
+2019/08/04 16:40:31 [TRACE] vertex "provider.music": starting visit (*terraform.NodeApplyableProvider)
+2019/08/04 16:40:31 [TRACE] vertex "provider.music": evaluating
+2019/08/04 16:40:31 [TRACE] [walkRefresh] Entering eval tree: provider.music
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2019-08-04T16:40:31.572-0700 [INFO]  plugin: configuring client automatic mTLS
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "provider.calendar"
+2019/08/04 16:40:31 [TRACE] vertex "provider.calendar": starting visit (*terraform.NodeApplyableProvider)
+2019/08/04 16:40:31 [TRACE] vertex "provider.calendar": evaluating
+2019/08/04 16:40:31 [TRACE] [walkRefresh] Entering eval tree: provider.calendar
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2019-08-04T16:40:31.605-0700 [DEBUG] plugin: starting plugin: path=/home/peddy/.terraform.d/plugins/terraform-provider-music args=[/home/peddy/.terraform.d/plugins/terraform-provider-music]
+2019-08-04T16:40:31.605-0700 [DEBUG] plugin: plugin started: path=/home/peddy/.terraform.d/plugins/terraform-provider-music pid=158133
+2019-08-04T16:40:31.605-0700 [DEBUG] plugin: waiting for RPC address: path=/home/peddy/.terraform.d/plugins/terraform-provider-music
+2019-08-04T16:40:31.613-0700 [INFO]  plugin.terraform-provider-music: configuring server automatic mTLS: timestamp=2019-08-04T16:40:31.613-0700
+2019-08-04T16:40:31.645-0700 [DEBUG] plugin.terraform-provider-music: plugin address: address=/tmp/plugin907297967 network=unix timestamp=2019-08-04T16:40:31.645-0700
+2019-08-04T16:40:31.645-0700 [DEBUG] plugin: using plugin: version=5
+2019/08/04 16:40:31 [TRACE] BuiltinEvalContext: Initialized "music" provider for provider.music
+2019/08/04 16:40:31 [TRACE] <root>: eval: terraform.EvalNoop
+2019/08/04 16:40:31 [TRACE] <root>: eval: terraform.EvalNoop
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2019/08/04 16:40:31 [TRACE] buildProviderConfig for provider.music: using explicit config only
+2019/08/04 16:40:31 [TRACE] GRPCProvider: GetSchema
+2019-08-04T16:40:31.646-0700 [INFO]  plugin: configuring client automatic mTLS
+2019-08-04T16:40:31.681-0700 [DEBUG] plugin: starting plugin: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar args=[/home/peddy/.terraform.d/plugins/terraform-provider-calendar]
+2019-08-04T16:40:31.681-0700 [DEBUG] plugin: plugin started: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar pid=158147
+2019-08-04T16:40:31.681-0700 [DEBUG] plugin: waiting for RPC address: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar
+2019-08-04T16:40:31.688-0700 [INFO]  plugin.terraform-provider-calendar: configuring server automatic mTLS: timestamp=2019-08-04T16:40:31.688-0700
+2019-08-04T16:40:31.721-0700 [DEBUG] plugin: using plugin: version=5
+2019-08-04T16:40:31.721-0700 [DEBUG] plugin.terraform-provider-calendar: plugin address: address=/tmp/plugin504289525 network=unix timestamp=2019-08-04T16:40:31.721-0700
+2019/08/04 16:40:31 [TRACE] BuiltinEvalContext: Initialized "calendar" provider for provider.calendar
+2019/08/04 16:40:31 [TRACE] <root>: eval: terraform.EvalNoop
+2019/08/04 16:40:31 [TRACE] <root>: eval: terraform.EvalNoop
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2019/08/04 16:40:31 [TRACE] buildProviderConfig for provider.calendar: no configuration at all
+2019/08/04 16:40:31 [TRACE] GRPCProvider: GetSchema
+2019/08/04 16:40:31 [TRACE] GRPCProvider: Configure
+2019/08/04 16:40:31 [TRACE] [walkRefresh] Exiting eval tree: provider.music
+2019/08/04 16:40:31 [TRACE] vertex "provider.music": visit complete
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "data.music_concert.recently_played_artists"
+2019/08/04 16:40:31 [TRACE] vertex "data.music_concert.recently_played_artists": starting visit (*terraform.NodeRefreshableDataResource)
+2019/08/04 16:40:31 [TRACE] vertex "data.music_concert.recently_played_artists": expanding dynamic subgraph
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+data.music_concert.recently_played_artists - *terraform.NodeRefreshableDataResourceInstance
+------
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2019/08/04 16:40:31 [DEBUG] ReferenceTransformer: "data.music_concert.recently_played_artists" references: []
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] Executing graph transform *terraform.RootTransformer
+2019/08/04 16:40:31 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2019/08/04 16:40:31 [TRACE] vertex "data.music_concert.recently_played_artists": entering dynamic subgraph
+2019/08/04 16:40:31 [TRACE] dag/walk: updating graph
+2019/08/04 16:40:31 [TRACE] dag/walk: added new vertex: "data.music_concert.recently_played_artists"
+2019/08/04 16:40:31 [TRACE] dag/walk: visiting "data.music_concert.recently_played_artists"
+2019/08/04 16:40:31 [TRACE] vertex "data.music_concert.recently_played_artists": starting visit (*terraform.NodeRefreshableDataResourceInstance)
+2019/08/04 16:40:31 [TRACE] vertex "data.music_concert.recently_played_artists": evaluating
+2019/08/04 16:40:31 [TRACE] [walkRefresh] Entering eval tree: data.music_concert.recently_played_artists
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalWriteState
+2019/08/04 16:40:31 [TRACE] EvalWriteState: removing state object for data.music_concert.recently_played_artists
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalIf
+2019/08/04 16:40:31 [TRACE] <root>: eval: terraform.EvalNoop
+2019/08/04 16:40:31 [TRACE] <root>: eval: *terraform.EvalReadData
+2019/08/04 16:40:31 [TRACE] EvalReadData: working on data.music_concert.recently_played_artists
+2019/08/04 16:40:31 [TRACE] Re-validating config for data.music_concert.recently_played_artists
+2019/08/04 16:40:31 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2019/08/04 16:40:31 [TRACE] EvalReadData: data.music_concert.recently_played_artists configuration is complete, so reading from provider
+2019/08/04 16:40:31 [TRACE] GRPCProvider: ReadDataSource
+2019/08/04 16:40:31 [TRACE] GRPCProvider: Configure
+2019-08-04T16:40:31.781-0700 [DEBUG] plugin.terraform-provider-calendar: 2019/08/04 16:40:31 [INFO] authenticating with local client
+2019/08/04 16:40:31 [TRACE] [walkRefresh] Exiting eval tree: provider.calendar
+2019/08/04 16:40:31 [TRACE] vertex "provider.calendar": visit complete
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: panic: runtime error: makeslice: cap out of range
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: 
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: goroutine 38 [running]:
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: github.com/unclepeddy/lynq/clients/seatgeek.(*Client).GetArtistsConcerts(0xc000445770, 0xc0004240a0, 0x5, 0x5, 0x5, 0x0, 0x0, 0x42c87f, 0x8)
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: 	/home/peddy/repos/go/src/github.com/unclepeddy/lynq/clients/seatgeek/seatgeek.go:47 +0x58
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: main.(*Service).GetConcerts(0xc0005146f0, 0x1058460, 0x1, 0xc0001bc310, 0xc000181970, 0xd89739)
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: 	/home/peddy/repos/go/src/github.com/unclepeddy/lynq/providers/music/service.go:47 +0x10b
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: main.dataSourceConcertRead(0xc0001bc310, 0xf2e760, 0xc0000100c8, 0xc0001bc310, 0x0)
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: 	/home/peddy/repos/go/src/github.com/unclepeddy/lynq/providers/music/data_source_concert.go:54 +0x47
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: github.com/unclepeddy/lynq/vendor/github.com/hashicorp/terraform/helper/schema.(*Resource).ReadDataApply(0xc000470180, 0xc00000e2c0, 0xf2e760, 0xc0000100c8, 0xc0004763c8, 0x1, 0x0)
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: 	/home/peddy/repos/go/src/github.com/unclepeddy/lynq/vendor/github.com/hashicorp/terraform/helper/schema/resource.go:379 +0x88
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: github.com/unclepeddy/lynq/vendor/github.com/hashicorp/terraform/helper/schema.(*Provider).ReadDataApply(0xc000470200, 0xc000181af0, 0xc00000e2c0, 0xc00000e2c0, 0x0, 0x0)
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: 	/home/peddy/repos/go/src/github.com/unclepeddy/lynq/vendor/github.com/hashicorp/terraform/helper/schema/provider.go:442 +0x17f
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: github.com/unclepeddy/lynq/vendor/github.com/hashicorp/terraform/helper/plugin.(*GRPCProviderServer).ReadDataSource(0xc00046a038, 0x13136c0, 0xc000462960, 0xc0001e20c0, 0xc00046a038, 0xc000462960, 0xc000206ba8)
+2019-08-04T16:40:32.288-0700 [DEBUG] plugin.terraform-provider-music: 	/home/peddy/repos/go/src/github.com/unclepeddy/lynq/vendor/github.com/hashicorp/terraform/helper/plugin/grpc_provider.go:1053 +0x45f
+2019-08-04T16:40:32.289-0700 [DEBUG] plugin.terraform-provider-music: github.com/unclepeddy/lynq/vendor/github.com/hashicorp/terraform/internal/tfplugin5._Provider_ReadDataSource_Handler(0x104c940, 0xc00046a038, 0x13136c0, 0xc000462960, 0xc00020e230, 0x0, 0x13136c0, 0xc000462960, 0xc0004640c0, 0x30)
+2019-08-04T16:40:32.289-0700 [DEBUG] plugin.terraform-provider-music: 	/home/peddy/repos/go/src/github.com/unclepeddy/lynq/vendor/github.com/hashicorp/terraform/internal/tfplugin5/tfplugin5.pb.go:3253 +0x23e
+2019-08-04T16:40:32.289-0700 [DEBUG] plugin.terraform-provider-music: github.com/unclepeddy/lynq/vendor/google.golang.org/grpc.(*Server).processUnaryRPC(0xc00009fe00, 0x131e300, 0xc00054e600, 0xc000386000, 0xc0000b6510, 0x1b985b0, 0x0, 0x0, 0x0)
+2019-08-04T16:40:32.289-0700 [DEBUG] plugin.terraform-provider-music: 	/home/peddy/repos/go/src/github.com/unclepeddy/lynq/vendor/google.golang.org/grpc/server.go:998 +0x470
+2019-08-04T16:40:32.289-0700 [DEBUG] plugin.terraform-provider-music: github.com/unclepeddy/lynq/vendor/google.golang.org/grpc.(*Server).handleStream(0xc00009fe00, 0x131e300, 0xc00054e600, 0xc000386000, 0x0)
+2019-08-04T16:40:32.289-0700 [DEBUG] plugin.terraform-provider-music: 	/home/peddy/repos/go/src/github.com/unclepeddy/lynq/vendor/google.golang.org/grpc/server.go:1278 +0xda6
+2019-08-04T16:40:32.289-0700 [DEBUG] plugin.terraform-provider-music: github.com/unclepeddy/lynq/vendor/google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc00040ce40, 0xc00009fe00, 0x131e300, 0xc00054e600, 0xc000386000)
+2019-08-04T16:40:32.289-0700 [DEBUG] plugin.terraform-provider-music: 	/home/peddy/repos/go/src/github.com/unclepeddy/lynq/vendor/google.golang.org/grpc/server.go:717 +0x9f
+2019-08-04T16:40:32.289-0700 [DEBUG] plugin.terraform-provider-music: created by github.com/unclepeddy/lynq/vendor/google.golang.org/grpc.(*Server).serveStreams.func1
+2019-08-04T16:40:32.289-0700 [DEBUG] plugin.terraform-provider-music: 	/home/peddy/repos/go/src/github.com/unclepeddy/lynq/vendor/google.golang.org/grpc/server.go:715 +0xa1
+2019/08/04 16:40:32 [ERROR] <root>: eval: *terraform.EvalReadData, err: rpc error: code = Unavailable desc = transport is closing
+2019/08/04 16:40:32 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2019/08/04 16:40:32 [TRACE] [walkRefresh] Exiting eval tree: data.music_concert.recently_played_artists
+2019/08/04 16:40:32 [TRACE] vertex "data.music_concert.recently_played_artists": visit complete
+2019/08/04 16:40:32 [TRACE] vertex "data.music_concert.recently_played_artists": dynamic subgraph encountered errors
+2019/08/04 16:40:32 [TRACE] vertex "data.music_concert.recently_played_artists": visit complete
+2019-08-04T16:40:32.291-0700 [DEBUG] plugin: plugin process exited: path=/home/peddy/.terraform.d/plugins/terraform-provider-music pid=158133 error="exit status 2"
+2019/08/04 16:40:32 [TRACE] dag/walk: upstream of "provider.music (close)" errored, so skipping
+2019/08/04 16:40:32 [TRACE] dag/walk: upstream of "calendar_event.concert" errored, so skipping
+2019/08/04 16:40:32 [TRACE] dag/walk: upstream of "provider.calendar (close)" errored, so skipping
+2019/08/04 16:40:32 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2019/08/04 16:40:32 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2019/08/04 16:40:32 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2019-08-04T16:40:32.292-0700 [DEBUG] plugin: plugin exited
+2019-08-04T16:40:32.294-0700 [DEBUG] plugin: plugin process exited: path=/home/peddy/.terraform.d/plugins/terraform-provider-calendar pid=158147
+2019-08-04T16:40:32.294-0700 [DEBUG] plugin: plugin exited

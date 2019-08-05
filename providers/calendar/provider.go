@@ -1,4 +1,4 @@
-package googlecalendar
+package main
 
 import (
 	"context"
@@ -17,7 +17,7 @@ var (
 func Provider() *schema.Provider {
 	return &schema.Provider{
 		ResourcesMap: map[string]*schema.Resource{
-			"googlecalendar_event": resourceEvent(),
+			"calendar_event": resourceEvent(),
 		},
 		ConfigureFunc: providerConfigure,
 	}

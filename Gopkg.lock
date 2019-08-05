@@ -163,6 +163,14 @@
   version = "v2.0.5"
 
 [[projects]]
+  digest = "1:237706001cd6602a5bf2782603d6d62a0c855eb58c4d593ae4737165109abcd8"
+  name = "github.com/gosimple/slug"
+  packages = ["."]
+  pruneopts = ""
+  revision = "ec8fb677f0647081580e5f3290dca1bd75af54fb"
+  version = "v1.6.0"
+
+[[projects]]
   digest = "1:8e3bd93036b4a925fe2250d3e4f38f21cadb8ef623561cd80c3c50c114b13201"
   name = "github.com/hashicorp/errwrap"
   packages = ["."]
@@ -479,6 +487,14 @@
   version = "v1.2.1"
 
 [[projects]]
+  branch = "master"
+  digest = "1:dbf4e16c65ac05df91dd12f5bb52ac7a0530e570a76f4855d157997850ebb1fa"
+  name = "github.com/rainycape/unidecode"
+  packages = ["."]
+  pruneopts = ""
+  revision = "cb7f23ec59bec0d61b19c56cd88cee3d0cc1870c"
+
+[[projects]]
   digest = "1:7f569d906bdd20d906b606415b7d794f798f91a62fcfb6a4daa6d50690fb7a3f"
   name = "github.com/satori/go.uuid"
   packages = ["."]
@@ -765,6 +781,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/gosimple/slug",
     "github.com/hashicorp/terraform/helper/logging",
     "github.com/hashicorp/terraform/helper/schema",
     "github.com/hashicorp/terraform/helper/validation",

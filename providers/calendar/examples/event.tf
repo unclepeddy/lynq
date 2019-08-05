@@ -1,4 +1,4 @@
-resource "googlecalendar_event" "peddy_kyle" {
+resource "calendar_event" "peddy_kyle" {
   summary     = "Sit around and shoot shit"
   description = "See summary"
   location    = "Fort Asshole"
