@@ -31,8 +31,7 @@ Lessons learned:
 * Terraform has a number of shortcomings we should avoid
   * A few magical things (eg. associating resource types with a provider by taking the first word of the resource type name, separated by underscores)
   * It remembers a view of the world and tries to match it with a newer state using resource identifiers; when immutable, this works fine; but when the IDs change, or the order in which they appear changes across syncs, it has a tough time reconciling the changes.
-* Methods of procuring and using user and application credentials differ widely across services
-
+  * Methods of procuring and using user and application credentials differ widely across services
 
 ## Phase 2
 
