@@ -38,11 +38,11 @@ Lessons learned:
 The overall aim in this phase is to use Kubernetes-native constructs to create resources based on other resources.
 
 O: Build re-usable infrastructure
-- KR: Build 1 service client
+- KR: Build 1 service client (Google Photos)
 
 O: Learn from other technologies
 - KR: Define CRDs for photos and albums in Google Photos
-- KR: Build a Kubernetes operator using best practices
+- KR: Build a Kubernetes operator (kubebuilder) using best practices 
 
 O:  Programmatically interact with third-party resources
-- KR: Continuously add photos to an album based on a criteria defined on the metadata of photos
+- KR: Continuously add photos to an album based on a criteria defined on the metadata of photos added to users' library
