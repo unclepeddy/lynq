@@ -1,0 +1,7 @@
+domain: lynq.peddy.ai
+repo: k8s-operator
+resources:
+- group: photos
+  kind: Album
+  version: v1alpha1
+version: "2"

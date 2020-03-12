@@ -1,0 +1,7 @@
+apiVersion: photos.lynq.peddy.ai/v1alpha1
+kind: Album
+metadata:
+  name: album-sample
+spec:
+  # Add fields here
+  foo: bar

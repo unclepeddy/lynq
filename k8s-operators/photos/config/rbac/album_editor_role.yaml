@@ -1,0 +1,26 @@
+# permissions to do edit albums.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: album-editor-role
+rules:
+- apiGroups:
+  - photos.lynq.peddy.ai
+  resources:
+  - albums
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - photos.lynq.peddy.ai
+  resources:
+  - albums/status
+  verbs:
+  - get
+  - patch
+  - update
